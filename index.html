@@ -3,47 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>B&B Il Porto Napoli | Sito Ufficiale</title>
+    <title>B&B Il Porto Napoli | Via G. Melisurgo 15</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root { --primary: #003580; --accent: #25D366; --booking: #0071c2; --text: #333; --light: #f4f7f6; }
         body { font-family: 'Poppins', sans-serif; margin: 0; color: var(--text); background: var(--light); scroll-behavior: smooth; }
         nav { background: rgba(255,255,255,0.95); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: fixed; width: 90%; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        .logo { font-weight: 700; font-size: 1.5rem; color: var(--primary); text-transform: uppercase; }
+        .logo { font-weight: 700; font-size: 1.3rem; color: var(--primary); text-transform: uppercase; }
         .hero { 
-            height: 90vh; 
+            height: 85vh; 
             background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1523359366921-4c14294ff5bd?q=80&w=2000') no-repeat center/cover; 
             display: flex; flex-direction: column; justify-content: center; align-items: center; 
             color: white; text-align: center; padding: 0 20px; margin-top: 60px;
         }
-        .hero h1 { font-size: 3.5rem; margin-bottom: 10px; text-shadow: 2px 2px 15px rgba(0,0,0,0.5); font-weight: 700; }
-        .hero p { font-size: 1.2rem; max-width: 700px; font-weight: 300; }
-        .hero-btns { margin-top: 30px; display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 10px; text-shadow: 2px 2px 15px rgba(0,0,0,0.5); font-weight: 700; line-height: 1.1; }
+        .hero p { font-size: 1.2rem; max-width: 700px; font-weight: 300; margin-bottom: 30px; }
+        .hero-btns { display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; }
         .container { max-width: 1100px; margin: auto; padding: 60px 20px; }
         .btn { padding: 16px 30px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: 0.3s ease; display: inline-flex; align-items: center; gap: 10px; font-size: 0.95rem; }
         .btn:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
         .btn-booking { background: var(--booking); color: white; }
         .btn-whatsapp { background: var(--accent); color: white; }
-        .section-title { text-align: center; color: var(--primary); font-size: 2.2rem; margin-bottom: 40px; font-weight: 700; text-transform: uppercase; }
+        .section-title { text-align: center; color: var(--primary); font-size: 2.2rem; margin-bottom: 10px; font-weight: 700; text-transform: uppercase; }
+        .section-subtitle { text-align: center; color: #666; margin-bottom: 40px; font-weight: 300; display: block; }
         .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
         .gallery-item { border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); background: white; }
-        .gallery-item img { width: 100%; height: 250px; object-fit: cover; display: block; transition: 0.4s; }
+        .gallery-item img { width: 100%; height: 280px; object-fit: cover; display: block; transition: 0.4s; }
         .gallery-item:hover img { transform: scale(1.05); }
-        .map-container { width: 100%; height: 450px; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 25px rgba(0,0,0,0.1); margin: 40px 0; }
-        footer { background: var(--primary); color: white; padding: 40px 20px; text-align: center; font-size: 0.9rem; }
+        .map-wrapper { margin-top: 40px; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 25px rgba(0,0,0,0.1); }
+        footer { background: var(--primary); color: white; padding: 40px 20px; text-align: center; font-size: 0.9rem; line-height: 1.6; }
+        footer a { color: var(--accent); text-decoration: none; }
         @media (max-width: 768px) { .hero h1 { font-size: 2.5rem; } .hero-btns { flex-direction: column; width: 100%; } }
     </style>
 </head>
 <body>
 
     <nav>
-        <div class="logo">B&B IL PORTO</div>
+        <div class="logo">B&B IL PORTO - NAPOLI</div>
     </nav>
 
     <header class="hero">
         <h1>B&B Il Porto Napoli</h1>
-        <p>Accoglienza autentica nel cuore di Napoli. Vivi un soggiorno indimenticabile a pochi passi dal mare.</p>
+        <p>Via Guglielmo Melisurgo 15, Napoli. <br>L'accoglienza originale nel cuore del porto.</p>
         <div class="hero-btns">
             <a href="https://wa.me/393289376449?text=Salve%20mi%20chiamo%20%2C%20vorrei%20prenotare%20un%20soggiorno%20con%20data%20check%20in%20%2C%20e%20data%20check%20out%20%2C%20siamo%20in%20tot%20persone." class="btn btn-whatsapp" target="_blank">
                 <i class="fab fa-whatsapp"></i> Prenota via WhatsApp
@@ -55,29 +57,40 @@
     </header>
 
     <div class="container">
-        <h2 class="section-title">La Nostra Struttura</h2>
+        <h2 class="section-title">Le Nostre Camere</h2>
+        <span class="section-subtitle">Foto originali della nostra struttura</span>
         <div class="gallery">
-            <div class="gallery-item"><img src="corridoio.JPEG" alt="B&B Il Porto Corridoio"></div>
-            <div class="gallery-item"><img src="stanza1.jpg" alt="Camera 1"></div>
-            <div class="gallery-item"><img src="stanza2.jpg" alt="Camera 2"></div>
-            <div class="gallery-item"><img src="stanza3.jpg" alt="Camera 3"></div>
-            <div class="gallery-item"><img src="stanza4.jpg" alt="Camera 4"></div>
-            <div class="gallery-item"><img src="stanza5.jpg" alt="Camera 5"></div>
-            <div class="gallery-item"><img src="stanza6.jpg" alt="Camera 6"></div>
-            <div class="gallery-item"><img src="stanza7.jpg" alt="Camera 7"></div>
-            <div class="gallery-item"><img src="stanza8.jpg" alt="Camera 8"></div>
+            <div class="gallery-item"><img src="corridoio.JPEG" alt="Corridoio"></div>
+            <div class="gallery-item"><img src="stanza1.jpg" alt="Stanza 1"></div>
+            <div class="gallery-item"><img src="stanza2.jpg" alt="Stanza 2"></div>
+            <div class="gallery-item"><img src="stanza3.jpg" alt="Stanza 3"></div>
+            <div class="gallery-item"><img src="stanza4.jpg" alt="Stanza 4"></div>
+            <div class="gallery-item"><img src="stanza5.jpg" alt="Stanza 5"></div>
+            <div class="gallery-item"><img src="stanza6.jpg" alt="Stanza 6"></div>
+            <div class="gallery-item"><img src="stanza7.jpg" alt="Stanza 7"></div>
+            <div class="gallery-item"><img src="stanza8.jpg" alt="Stanza 8"></div>
             <div class="gallery-item"><img src="IMG_2993.jpg" alt="Dettaglio Camera"></div>
         </div>
 
-        <h2 class="section-title" style="margin-top: 60px;">Dove Siamo</h2>
-        <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m14!1m8!1m3!1d3029.584732155047!2d14.2568!3d40.8439!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133b084606138677%3A0x6b5a3205373a6202!2sNapoli%20Porto!5e0!3m2!1sit!2sit!4v1710260000000!5m2!1sit!2sit" allowfullscreen="" loading="lazy"></iframe>
+        <h2 class="section-title" style="margin-top: 80px;">La nostra posizione</h2>
+        <span class="section-subtitle">Via Guglielmo Melisurgo 15, 80133 Napoli (NA)</span>
+        <div class="map-wrapper">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m12!1m3!1d3029.585579997424!2d14.252565676648774!3d40.84038503058864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133b084e1a36f8e1%3A0x1ddebc7725a77c0d!2sVia%20Guglielmo%20Melisurgo%2C%2015%2C%2080133%20Napoli%20NA!5e0!3m2!1sit!2sit!4v1710260000000!5m2!1sit!2sit" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="https://maps.app.goo.gl/ChIJ4fg2Gk8IOxMRDdynJfe83h0" target="_blank" class="btn btn-booking">
+                <i class="fas fa-directions"></i> Ottieni indicazioni
+            </a>
         </div>
     </div>
 
     <footer>
-        <p>© 2026 B&B Il Porto Napoli - Proprietà Riservata.<br>
-        Le immagini sono di proprietà esclusiva della struttura.</p>
+        <p>
+            <strong>B&B Il Porto</strong><br>
+            Via Guglielmo Melisurgo 15, 80133 Napoli (NA)<br>
+            Telefono/WhatsApp: <a href="tel:+393289376449">+39 328 937 6449</a><br>
+            © 2026 Proprietà Riservata.
+        </p>
     </footer>
 
 </body>
