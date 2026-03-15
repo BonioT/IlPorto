@@ -15,56 +15,45 @@
         .logo { font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; }
 
         .hero { 
-            height: 50vh; 
+            height: 45vh; 
             background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('golfo-di-Napoli-sera.jpg') no-repeat center/cover; 
             display: flex; flex-direction: column; justify-content: center; align-items: center; 
             color: white; text-align: center; margin-top: 50px;
         }
-        .hero h1 { font-size: 2.8rem; margin: 0; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
+        .hero h1 { font-size: 2.5rem; margin: 0; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
         
         .wa-float {
             position: fixed; width: 60px; height: 60px; bottom: 20px; right: 20px; background-color: #25d366;
             color: #FFF; border-radius: 50px; text-align: center; font-size: 30px; box-shadow: 2px 2px 5px rgba(0,0,0,0.3); z-index: 10000;
-            display: flex; align-items: center; justify-content: center; text-decoration: none; transition: 0.3s;
+            display: flex; align-items: center; justify-content: center; text-decoration: none;
         }
 
-        .container { max-width: 1100px; margin: 30px auto; padding: 20px; }
-        .section-title { text-align: center; color: var(--primary); margin-bottom: 25px; text-transform: uppercase; font-weight: 700; }
+        .container { max-width: 1100px; margin: 20px auto; padding: 0 20px; }
+        .section-title { text-align: center; color: var(--primary); margin: 30px 0 15px 0; text-transform: uppercase; font-weight: 700; font-size: 1.5rem; }
 
-        /* SERVIZI */
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 15px; text-align: center; margin-bottom: 40px; background: white; padding: 20px; border-radius: 15px; }
-        .service-item i { color: var(--primary); font-size: 1.5rem; margin-bottom: 8px; }
-        .service-item p { font-size: 0.8rem; font-weight: 600; margin: 0; }
-
-        /* CAROSELLO STILE INSTAGRAM */
+        /* CAROSELLO INSTAGRAM */
         .instagram-slider {
-            display: flex;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            gap: 10px;
-            padding: 10px 0;
-            scrollbar-width: none; /* Nasconde scrollbar su Firefox */
+            display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 10px; padding: 10px 0; scrollbar-width: none;
         }
-        .instagram-slider::-webkit-scrollbar { display: none; } /* Nasconde scrollbar su Chrome/Safari */
-
-        .instagram-slider a {
-            flex: 0 0 85%; /* Occupa l'85% della larghezza su mobile */
-            scroll-snap-align: center;
-            height: 400px;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-        @media (min-width: 768px) {
-            .instagram-slider a { flex: 0 0 30%; height: 450px; } /* 3 foto visibili su PC */
-        }
+        .instagram-slider::-webkit-scrollbar { display: none; }
+        .instagram-slider a { flex: 0 0 85%; scroll-snap-align: center; height: 350px; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        @media (min-width: 768px) { .instagram-slider a { flex: 0 0 30%; height: 400px; } }
         .instagram-slider img { width: 100%; height: 100%; object-fit: cover; }
 
-        /* MAPPA */
-        .map-container { margin-top: 40px; border-radius: 15px; overflow: hidden; height: 350px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        /* SERVIZI PICCOLI */
+        .services-grid { 
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; 
+            text-align: center; background: white; padding: 15px; border-radius: 15px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05); margin-bottom: 20px;
+        }
+        @media (min-width: 768px) { .services-grid { grid-template-columns: repeat(9, 1fr); } }
+        .service-item i { color: var(--primary); font-size: 1.2rem; margin-bottom: 5px; }
+        .service-item p { font-size: 0.7rem; font-weight: 600; margin: 0; color: #555; }
 
-        footer { background: var(--primary); color: white; text-align: center; padding: 40px 20px; margin-top: 50px; }
-        .btn-direct { display: inline-block; background: var(--accent); color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; margin-top: 15px; font-weight: 600; }
+        .map-container { border-radius: 15px; overflow: hidden; height: 300px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-bottom: 40px; }
+
+        footer { background: var(--primary); color: white; text-align: center; padding: 30px 20px; }
+        .btn-call { display: inline-block; background: white; color: var(--primary); padding: 10px 20px; border-radius: 50px; text-decoration: none; font-weight: 600; margin-top: 10px; }
     </style>
 </head>
 <body>
@@ -79,20 +68,8 @@
 </header>
 
 <div class="container">
-    <h2 class="section-title">Servizi</h2>
-    <div class="services-grid">
-        <div class="service-item"><i class="fas fa-tint"></i><p>Acqua</p></div>
-        <div class="service-item"><i class="fas fa-coffee"></i><p>Caffè</p></div>
-        <div class="service-item"><i class="fas fa-hot-tub"></i><p>Bollitore</p></div>
-        <div class="service-item"><i class="fas fa-utensils"></i><p>Microonde</p></div>
-        <div class="service-item"><i class="fas fa-snowflake"></i><p>Aria Condiz.</p></div>
-        <div class="service-item"><i class="fas fa-restroom"></i><p>Bagno Privato</p></div>
-        <div class="service-item"><i class="fas fa-wifi"></i><p>Wi-Fi 6</p></div>
-    </div>
-
-    <h2 class="section-title">La Struttura</h2>
-    <p style="text-align:center; font-size:0.8rem; color:#888; margin-top:-20px;">Scorri lateralmente per vedere le foto ⟷</p>
     
+    <h2 class="section-title">La Nostra Struttura</h2>
     <div class="instagram-slider">
         <a href="stanza1.jpg" data-lightbox="porto"><img src="stanza1.jpg"></a>
         <a href="stanza2.jpg" data-lightbox="porto"><img src="stanza2.jpg"></a>
@@ -115,18 +92,28 @@
         <a href="stanza19.jpg" data-lightbox="porto"><img src="stanza19.jpg"></a>
     </div>
 
-    <h2 class="section-title" style="margin-top:50px;">Dove siamo</h2>
+    <h2 class="section-title">Servizi</h2>
+    <div class="services-grid">
+        <div class="service-item"><i class="fas fa-bottle-water"></i><p>Acqua</p></div>
+        <div class="service-item"><i class="fas fa-mug-hot"></i><p>Tè</p></div>
+        <div class="service-item"><i class="fas fa-coffee"></i><p>Caffè</p></div>
+        <div class="service-item"><i class="fas fa-blender"></i><p>Bollitore</p></div>
+        <div class="service-item"><i class="fas fa-box"></i><p>Microonde</p></div>
+        <div class="service-item"><i class="fas fa-toilet"></i><p>Bagno</p></div>
+        <div class="service-item"><i class="fas fa-snowflake"></i><p>Aria Cond.</p></div>
+        <div class="service-item"><i class="fas fa-tv"></i><p>TV</p></div>
+        <div class="service-item"><i class="fas fa-wifi"></i><p>Wi-Fi</p></div>
+    </div>
+
+    <h2 class="section-title">Dove siamo</h2>
     <div class="map-container">
-        <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA_NON_INSERIRE_QUI&q=Via+Guglielmo+Melisurgo+15,Napoli" allowfullscreen></iframe>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m12!1m3!1d3029.3323!2d14.2541!3d40.8398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133b08401a36f8e1%3A0x1ddebc7b2527770d!2sVia%20Guglielmo%20Melisurgo%2C%2015%2C%2080133%20Napoli%20NA!5e0!3m2!1sit!2sit!4v1710000000000!5m2!1sit!2sit" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m13!1d3029.567073797619!2d14.25419137648344!3d40.83749722924379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133b084e1a36f8e1%3A0x7ddebc3727a7570d!2sVia%20Guglielmo%20Melisurgo%2C%2015%2C%2080133%20Napoli%20NA!5e0!3m2!1sit!2sit!4v1710500000000!5m2!1sit!2sit" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 </div>
 
 <footer>
-    <p><strong>B&B Il Porto</strong><br>Via G. Melisurgo 15, Napoli</p>
-    <a href="tel:+393289376449" class="btn-direct" style="background: white; color: var(--primary);">
-        <i class="fas fa-phone"></i> Chiama ora
-    </a>
+    <p><strong>B&B Il Porto</strong><br>Via Guglielmo Melisurgo 15, Napoli</p>
+    <a href="tel:+393289376449" class="btn-call"><i class="fas fa-phone"></i> Chiama ora</a>
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
