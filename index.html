@@ -4,115 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>B&B Il Porto Napoli | Sito Ufficiale</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
     <style>
         :root { --primary: #003580; --accent: #25D366; --text: #333; }
         body { font-family: 'Poppins', sans-serif; margin: 0; background: #f4f7f6; color: var(--text); overflow-x: hidden; }
-        
         nav { background: white; padding: 15px 5%; display: flex; justify-content: center; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
         .logo { font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; }
-
         .hero { 
-            height: 45vh; 
+            height: 40vh; 
             background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('golfo-di-Napoli-sera.jpg') no-repeat center/cover; 
             display: flex; flex-direction: column; justify-content: center; align-items: center; 
             color: white; text-align: center; margin-top: 50px;
         }
-        .hero h1 { font-size: 2.5rem; margin: 0; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
-        
-        .wa-float {
-            position: fixed; width: 60px; height: 60px; bottom: 20px; right: 20px; background-color: #25d366;
-            color: #FFF; border-radius: 50px; text-align: center; font-size: 30px; box-shadow: 2px 2px 5px rgba(0,0,0,0.3); z-index: 10000;
-            display: flex; align-items: center; justify-content: center; text-decoration: none;
-        }
-
-        .container { max-width: 1100px; margin: 20px auto; padding: 0 20px; }
-        .section-title { text-align: center; color: var(--primary); margin: 30px 0 15px 0; text-transform: uppercase; font-weight: 700; font-size: 1.5rem; }
-
-        /* CAROSELLO INSTAGRAM */
-        .instagram-slider {
-            display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 10px; padding: 10px 0; scrollbar-width: none;
-        }
+        .hero h1 { font-size: 2.2rem; margin: 0; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
+        .wa-float { position: fixed; width: 60px; height: 60px; bottom: 20px; right: 20px; background-color: #25d366; color: #FFF; border-radius: 50px; text-align: center; font-size: 30px; box-shadow: 2px 2px 5px rgba(0,0,0,0.3); z-index: 10000; display: flex; align-items: center; justify-content: center; text-decoration: none; }
+        .container { max-width: 1100px; margin: 10px auto; padding: 0 15px; }
+        .section-title { text-align: center; color: var(--primary); margin: 25px 0 10px 0; text-transform: uppercase; font-weight: 700; font-size: 1.3rem; }
+        .instagram-slider { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 8px; padding: 10px 0; scrollbar-width: none; }
         .instagram-slider::-webkit-scrollbar { display: none; }
-        .instagram-slider a { flex: 0 0 85%; scroll-snap-align: center; height: 350px; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-        @media (min-width: 768px) { .instagram-slider a { flex: 0 0 30%; height: 400px; } }
+        .instagram-slider a { flex: 0 0 82%; scroll-snap-align: center; height: 320px; border-radius: 12px; overflow: hidden; box-shadow: 0 3px 8px rgba(0,0,0,0.1); }
+        @media (min-width: 768px) { .instagram-slider a { flex: 0 0 30%; height: 380px; } }
         .instagram-slider img { width: 100%; height: 100%; object-fit: cover; }
-
-        /* SERVIZI PICCOLI */
-        .services-grid { 
-            display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; 
-            text-align: center; background: white; padding: 15px; border-radius: 15px; 
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05); margin-bottom: 20px;
-        }
+        .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; text-align: center; background: white; padding: 15px; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
         @media (min-width: 768px) { .services-grid { grid-template-columns: repeat(9, 1fr); } }
-        .service-item i { color: var(--primary); font-size: 1.2rem; margin-bottom: 5px; }
-        .service-item p { font-size: 0.7rem; font-weight: 600; margin: 0; color: #555; }
-
-        .map-container { border-radius: 15px; overflow: hidden; height: 300px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-bottom: 40px; }
-
-        footer { background: var(--primary); color: white; text-align: center; padding: 30px 20px; }
-        .btn-call { display: inline-block; background: white; color: var(--primary); padding: 10px 20px; border-radius: 50px; text-decoration: none; font-weight: 600; margin-top: 10px; }
+        .service-item i { color: var(--primary); font-size: 1.2rem; margin-bottom: 4px; }
+        .service-item p { font-size: 0.65rem; font-weight: 600; margin: 0; color: #555; }
+        .map-container { border-radius: 12px; overflow: hidden; height: 300px; box-shadow: 0 3px 8px rgba(0,0,0,0.1); margin-bottom: 30px; }
+        footer { background: var(--primary); color: white; text-align: center; padding: 25px 15px; }
+        .btn-call { display: inline-block; background: white; color: var(--primary); padding: 8px 18px; border-radius: 50px; text-decoration: none; font-weight: 600; margin-top: 10px; font-size: 0.9rem; }
     </style>
 </head>
 <body>
 
 <a href="https://wa.me/393289376449" class="wa-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
-
 <nav><div class="logo">B&B IL PORTO - NAPOLI</div></nav>
 
 <header class="hero">
     <h1>B&B Il Porto Napoli</h1>
-    <p>Via Guglielmo Melisurgo 15</p>
+    <p>Via G. Melisurgo 15, Napoli</p>
 </header>
 
 <div class="container">
-    
-    <h2 class="section-title">La Nostra Struttura</h2>
+    <h2 class="section-title">La Struttura</h2>
     <div class="instagram-slider">
-        <a href="stanza1.jpg" data-lightbox="porto"><img src="stanza1.jpg"></a>
-        <a href="stanza2.jpg" data-lightbox="porto"><img src="stanza2.jpg"></a>
-        <a href="stanza3.jpg" data-lightbox="porto"><img src="stanza3.jpg"></a>
-        <a href="stanza4.jpg" data-lightbox="porto"><img src="stanza4.jpg"></a>
-        <a href="stanza5.jpg" data-lightbox="porto"><img src="stanza5.jpg"></a>
-        <a href="stanza6.jpg" data-lightbox="porto"><img src="stanza6.jpg"></a>
-        <a href="stanza7.jpg" data-lightbox="porto"><img src="stanza7.jpg"></a>
-        <a href="stanza8.jpg" data-lightbox="porto"><img src="stanza8.jpg"></a>
-        <a href="stanza9.jpg" data-lightbox="porto"><img src="stanza9.jpg"></a>
-        <a href="stanza10.jpg" data-lightbox="porto"><img src="stanza10.jpg"></a>
-        <a href="stanza11.jpg" data-lightbox="porto"><img src="stanza11.jpg"></a>
-        <a href="stanza12.jpg" data-lightbox="porto"><img src="stanza12.jpg"></a>
-        <a href="stanza13.jpg" data-lightbox="porto"><img src="stanza13.jpg"></a>
-        <a href="stanza14.jpg" data-lightbox="porto"><img src="stanza14.jpg"></a>
-        <a href="stanza15.jpg" data-lightbox="porto"><img src="stanza15.jpg"></a>
-        <a href="stanza16.jpg" data-lightbox="porto"><img src="stanza16.jpg"></a>
-        <a href="stanza17.jpg" data-lightbox="porto"><img src="stanza17.jpg"></a>
-        <a href="stanza18.jpg" data-lightbox="porto"><img src="stanza18.jpg"></a>
-        <a href="stanza19.jpg" data-lightbox="porto"><img src="stanza19.jpg"></a>
+        <a href="stanza1.jpg?v=1" data-lightbox="porto"><img src="stanza1.jpg?v=1"></a>
+        <a href="stanza2.jpg?v=1" data-lightbox="porto"><img src="stanza2.jpg?v=1"></a>
+        <a href="stanza3.jpg?v=1" data-lightbox="porto"><img src="stanza3.jpg?v=1"></a>
+        <a href="stanza4.jpg?v=1" data-lightbox="porto"><img src="stanza4.jpg?v=1"></a>
+        <a href="stanza5.jpg?v=1" data-lightbox="porto"><img src="stanza5.jpg?v=1"></a>
+        <a href="stanza6.jpg?v=1" data-lightbox="porto"><img src="stanza6.jpg?v=1"></a>
+        <a href="stanza7.jpg?v=1" data-lightbox="porto"><img src="stanza7.jpg?v=1"></a>
+        <a href="stanza8.jpg?v=1" data-lightbox="porto"><img src="stanza8.jpg?v=1"></a>
+        <a href="stanza9.jpg?v=1" data-lightbox="porto"><img src="stanza9.jpg?v=1"></a>
+        <a href="stanza10.jpg?v=1" data-lightbox="porto"><img src="stanza10.jpg?v=1"></a>
+        <a href="stanza11.jpg?v=1" data-lightbox="porto"><img src="stanza11.jpg?v=1"></a>
+        <a href="stanza12.jpg?v=1" data-lightbox="porto"><img src="stanza12.jpg?v=1"></a>
+        <a href="stanza13.jpg?v=1" data-lightbox="porto"><img src="stanza13.jpg?v=1"></a>
+        <a href="stanza14.jpg?v=1" data-lightbox="porto"><img src="stanza14.jpg?v=1"></a>
+        <a href="stanza15.jpg?v=1" data-lightbox="porto"><img src="stanza15.jpg?v=1"></a>
+        <a href="stanza16.jpg?v=1" data-lightbox="porto"><img src="stanza16.jpg?v=1"></a>
+        <a href="stanza17.jpg?v=1" data-lightbox="porto"><img src="stanza17.jpg?v=1"></a>
+        <a href="stanza18.jpg?v=1" data-lightbox="porto"><img src="stanza18.jpg?v=1"></a>
+        <a href="stanza19.jpg?v=1" data-lightbox="porto"><img src="stanza19.jpg?v=1"></a>
     </div>
 
     <h2 class="section-title">Servizi</h2>
     <div class="services-grid">
-        <div class="service-item"><i class="fas fa-bottle-water"></i><p>Acqua</p></div>
-        <div class="service-item"><i class="fas fa-mug-hot"></i><p>Tè</p></div>
-        <div class="service-item"><i class="fas fa-coffee"></i><p>Caffè</p></div>
-        <div class="service-item"><i class="fas fa-blender"></i><p>Bollitore</p></div>
-        <div class="service-item"><i class="fas fa-box"></i><p>Microonde</p></div>
-        <div class="service-item"><i class="fas fa-toilet"></i><p>Bagno</p></div>
-        <div class="service-item"><i class="fas fa-snowflake"></i><p>Aria Cond.</p></div>
-        <div class="service-item"><i class="fas fa-tv"></i><p>TV</p></div>
-        <div class="service-item"><i class="fas fa-wifi"></i><p>Wi-Fi</p></div>
+        <div class="service-item"><i class="fa-solid fa-bottle-water"></i><p>Acqua</p></div>
+        <div class="service-item"><i class="fa-solid fa-mug-hot"></i><p>Tè</p></div>
+        <div class="service-item"><i class="fa-solid fa-coffee"></i><p>Caffè</p></div>
+        <div class="service-item"><i class="fa-solid fa-mug-saucer"></i><p>Bollitore</p></div>
+        <div class="service-item"><i class="fa-solid fa-fire-burner"></i><p>Microonde</p></div>
+        <div class="service-item"><i class="fa-solid fa-toilet"></i><p>Bagno</p></div>
+        <div class="service-item"><i class="fa-solid fa-snowflake"></i><p>Aria Cond.</p></div>
+        <div class="service-item"><i class="fa-solid fa-tv"></i><p>TV</p></div>
+        <div class="service-item"><i class="fa-solid fa-wifi"></i><p>Wi-Fi</p></div>
     </div>
 
-    <h2 class="section-title">Dove siamo</h2>
+    <h2 class="section-title">Posizione</h2>
     <div class="map-container">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m13!1d3029.567073797619!2d14.25419137648344!3d40.83749722924379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133b084e1a36f8e1%3A0x7ddebc3727a7570d!2sVia%20Guglielmo%20Melisurgo%2C%2015%2C%2080133%20Napoli%20NA!5e0!3m2!1sit!2sit!4v1710500000000!5m2!1sit!2sit" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe width="100%" height="100%" frameborder="0" style="border:0" 
+            src="https://maps.google.com/maps?q=Via%20Guglielmo%20Melisurgo%2015,%20Napoli&t=&z=16&ie=UTF8&iwloc=&output=embed" allowfullscreen>
+        </iframe>
     </div>
 </div>
 
 <footer>
-    <p><strong>B&B Il Porto</strong><br>Via Guglielmo Melisurgo 15, Napoli</p>
+    <p><strong>B&B Il Porto</strong><br>Via G. Melisurgo 15, Napoli</p>
     <a href="tel:+393289376449" class="btn-call"><i class="fas fa-phone"></i> Chiama ora</a>
 </footer>
 
